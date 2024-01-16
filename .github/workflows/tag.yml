@@ -11,11 +11,11 @@ jobs:
     runs-on : ubuntu-latest
     steps:
       - name: Afficher la valeur de VAR1
-        run: echo "La valeur de la variable est ${{ vars.VAR11 }}"
+        run: echo "La valeur de la variable est ${{ vars.VAR1 }}"
 
   job2:
     needs: job1
-    if: ${{ failure() }}
+    if: ${{ always() }}
     runs-on : ubuntu-latest
     steps:
       - name: Afficher un message pour preciser que le job precedent a echoue
