@@ -8,7 +8,6 @@ on :
 
 jobs:
   job1:
-    env: VAR1: 18
     runs-on : ubuntu-latest
     steps:
       - name: Afficher la valeur de VAR1
